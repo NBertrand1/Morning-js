@@ -7,7 +7,10 @@ if (age >= 18) {
     console.log("Accès refusé");
 }*/
 
-//exercice 2
+/*exercice 2
 for (let index = 0; index < age; index++) {
     console.log("Bonne année !");
-};
+};*/
+
+//exercice 3
+age>=18?console.log("Bienvenu(e)"):console.log("Accès refusé");
