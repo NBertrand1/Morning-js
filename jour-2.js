@@ -6,3 +6,4 @@ if (age >= 18) {
 } else {
     console.log("Accès refusé");
 }
+
