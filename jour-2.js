@@ -25,9 +25,9 @@ for (let i = 1; i <= 20; i++) {
     } else {
         console.log(i);
     }
-}*/
+}
 
-//exercice 4
+exercice 4
 const notes = [12, 9, 15, 18, 16];
 let somme = 0;
 
@@ -36,3 +36,12 @@ for (let i = 0; i < notes.length; i++) {
 }
 
 console.log(somme / notes.length);
+*/
+
+//InverserMot
+
+function inverserMot(mot) {
+    return mot.split('').reverse().join('');
+}
+
+console.log(inverserMot("hello"));
