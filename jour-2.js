@@ -12,9 +12,9 @@ for (let index = 0; index < age; index++) {
 
 exercice 3
 age>=18?console.log("Bienvenu(e)"):console.log("Accès refusé");
-*/
 
-//fizzbuzz
+
+fizzbuzz
 for (let i = 1; i <= 20; i++) {
     if (i % 3 === 0 && i % 5 === 0) {
         console.log("FizzBuzz");
@@ -25,4 +25,14 @@ for (let i = 1; i <= 20; i++) {
     } else {
         console.log(i);
     }
+}*/
+
+//exercice 4
+const notes = [12, 9, 15, 18, 16];
+let somme = 0;
+
+for (let i = 0; i < notes.length; i++) {
+    somme += notes[i];
 }
+
+console.log(somme / notes.length);
