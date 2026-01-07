@@ -3,7 +3,7 @@ let utilisateur = {
     nom : "TANG ELOUMOU",
     age : 20,
     ville : "Kribi",
-    estConnecte : "True",
+    estConnecte : true,
     hobbies : ["football", "musique", "cinema"],
 }
 
