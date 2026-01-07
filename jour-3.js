@@ -29,7 +29,6 @@ let agesArray = [ 12, 16, 29, 56, 39, 25, 19, 8, 30, 45, 60 ];
 let filteredAges = agesArray.filter(age => age >= 18);
 
 console.log(filteredAges);
-*/
 
 //Exercice 4 
 let stock = [
@@ -47,3 +46,15 @@ let stock = [
 
 let stockPourPromo = stock.filter(produit => produit.quantité<5);
 console.log(stockPourPromo.map(produit => produit.nom));
+*/
+//Exercice 5
+let utilisateursBruts = [
+    { id: 1, prenom: "jean", nom: "dupont" },
+    { id: 2, prenom: "alice", nom: "martin" }   
+];
+
+let utilisateursNettoyes = utilisateursBruts.map(utilisateur => ({
+    id: utilisateur.id,
+    nomComplet: `${utilisateur.prenom} ${utilisateur.nom.toUpperCase()}`
+}));
+console.log(utilisateursNettoyes);
