@@ -58,7 +58,7 @@ let utilisateursNettoyes = utilisateursBruts.map(utilisateur => ({
     nomComplet: `${utilisateur.prenom} ${utilisateur.nom.toUpperCase()}`
 }));
 console.log(utilisateursNettoyes);
-*/
+
 //Exercice 6
 let carnetNotes = [
     { matiere: "Maths", note: 15 },
@@ -73,3 +73,11 @@ if (moyenne >= 10) {
 } else {
     console.log("Ajourné");
 }
+    */
+
+const title = document.getElementById("title");
+const changeButton = document.getElementById("button");
+
+changeButton.addEventListener("click", () => {
+    title.style.color = "blue";
+});
