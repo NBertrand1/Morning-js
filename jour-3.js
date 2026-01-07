@@ -46,7 +46,7 @@ let stock = [
 
 let stockPourPromo = stock.filter(produit => produit.quantité<5);
 console.log(stockPourPromo.map(produit => produit.nom));
-*/
+
 //Exercice 5
 let utilisateursBruts = [
     { id: 1, prenom: "jean", nom: "dupont" },
@@ -58,3 +58,18 @@ let utilisateursNettoyes = utilisateursBruts.map(utilisateur => ({
     nomComplet: `${utilisateur.prenom} ${utilisateur.nom.toUpperCase()}`
 }));
 console.log(utilisateursNettoyes);
+*/
+//Exercice 6
+let carnetNotes = [
+    { matiere: "Maths", note: 15 },
+    { matiere: "Français", note: 12 },
+    { matiere: "Anglais", note: 18 },
+    { matiere: "Physique", note: 10 }
+];
+
+let moyenne = carnetNotes.reduce((total, note) => total + note.note, 0) / carnetNotes.length;
+if (moyenne >= 10) {
+    console.log("Admis");
+} else {
+    console.log("Ajourné");
+}
