@@ -23,9 +23,27 @@ panier.forEach(element => {
 });
 
 console.log(`le prix total du panier est : ${prixTotalPanier} FCFA`);
-*/
+
 //Exercice 3
 let agesArray = [ 12, 16, 29, 56, 39, 25, 19, 8, 30, 45, 60 ]; 
 let filteredAges = agesArray.filter(age => age >= 18);
 
 console.log(filteredAges);
+*/
+
+//Exercice 4 
+let stock = [
+    {nom : "Clavier", categorie : "Informatique", quantité : 10 },
+    {nom : "Souris", categorie : "Informatique", quantité : 15 },
+    {nom : "Casque", categorie : "Informatique", quantité : 20 },
+    {nom : "T-shirt", categorie : "Vêtements", quantité : 5 },
+    {nom : "Pantalon", categorie : "Vêtements", quantité : 12 },
+    {nom : "Chapeau", categorie : "Vêtements", quantité : 8 },
+    {nom : "Sac à main", categorie : "Vêtements", quantité : 18 },
+    {nom : "Voiture" , categorie : "Automoblie" , quantité : 8},
+    {nom : "Stylo", categorie : "Fourniture", quantité : 3 },
+    {nom : "Ballon", categorie : "Sport", quantité : 4 },
+]
+
+let stockPourPromo = stock.filter(produit => produit.quantité<5);
+console.log(stockPourPromo.map(produit => produit.nom));
