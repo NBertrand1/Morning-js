@@ -85,13 +85,17 @@ changeButton.addEventListener("click", () => {
 */
 
 const img = document.querySelector(".card-image img");
-const afficher = document.getElementById("btn-afficher");
-const masquer = document.getElementById("btn-masquer");
+const btn = document.getElementById("btn");
+let display = true;
 
-masquer.addEventListener("click", () => {
-    img.style.display = "none";
-});
-
-afficher.addEventListener("click", () => {
-    img.style.display = "block";
+btn.addEventListener("click", () => {
+    if (display) {
+        img.style.display = "none";
+        btn.value = "Afficher";
+        display = false
+    }else{
+        display = true;
+        img.style.display = "block";
+        btn.value = "Masquer";
+    }
 });
