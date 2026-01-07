@@ -77,7 +77,8 @@ if (moyenne >= 10) {
 
 const title = document.getElementById("title");
 const changeButton = document.getElementById("button");
+const body = document.body;
 
 changeButton.addEventListener("click", () => {
-    title.style.color = "blue";
+    document.body.style.backgroundColor = "blue";
 });
