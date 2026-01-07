@@ -3,3 +3,51 @@
     align-items: center;
     justify-content: center;
 }
+
+.card{
+    width: 400px;
+    height: auto;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: bisque;
+    place-items: center;
+    border-radius: 20px;
+}
+
+.card-image{
+    width: 90%;
+    height: auto;
+}
+
+.card-image img{
+    width: 350px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.card-text{
+
+}
+
+.card-title h2{
+    text-align: left;
+    margin-left: 25px;
+}
+
+.card-description p{
+    text-align: left;
+    margin-left: 25px;
+}
+
+.card-buttons{
+    display: flex;
+    gap: 30px;
+}
+
+.card-buttons input[type="button"]{
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    
+}

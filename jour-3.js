@@ -73,7 +73,7 @@ if (moyenne >= 10) {
 } else {
     console.log("Ajourné");
 }
-    */
+    
 
 const title = document.getElementById("title");
 const changeButton = document.getElementById("button");
@@ -81,4 +81,17 @@ const body = document.body;
 
 changeButton.addEventListener("click", () => {
     document.body.style.backgroundColor = "blue";
+});
+*/
+
+const img = document.querySelector(".card-image img");
+const afficher = document.getElementById("btn-afficher");
+const masquer = document.getElementById("btn-masquer");
+
+masquer.addEventListener("click", () => {
+    img.style.display = "none";
+});
+
+afficher.addEventListener("click", () => {
+    img.style.display = "block";
 });
