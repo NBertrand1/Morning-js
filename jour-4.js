@@ -4,7 +4,7 @@ const greetingBtn = document.getElementById("greeting-button");
 
 greetingBtn.addEventListener("click", () => {
     alert(`Bonjour  ${greetingName.value}`);
-});*/
+});
 
 //Exercice 2
 
@@ -33,4 +33,17 @@ plus.addEventListener("click", () => {
 moins.addEventListener("click", () => {
     counter--; // Décrémente de 1
     updateDisplay();
+});*/
+
+//Exercice 3 
+let list = document.getElementById("items-list");
+let newLi = document.getElementById("new-item");
+let newLiBtn = document.getElementById("add-btn")
+
+newLiBtn.addEventListener("click", () => {
+    let li = document.createElement("li");
+    li.textContent = newLi.value;
+    list.appendChild(li);
+    newLi.value = "";
 });
+
