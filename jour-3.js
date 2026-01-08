@@ -84,6 +84,7 @@ changeButton.addEventListener("click", () => {
 });
 */
 
+/*Exercice 2
 const img = document.querySelector(".card-image img");
 const btn = document.getElementById("btn");
 let display = true;
@@ -92,10 +93,11 @@ btn.addEventListener("click", () => {
     if (display) {
         img.style.display = "none";
         btn.value = "Afficher";
-        display = false
+        display = false;
     }else{
         display = true;
         img.style.display = "block";
         btn.value = "Masquer";
     }
 });
+*/
