@@ -33,7 +33,7 @@ plus.addEventListener("click", () => {
 moins.addEventListener("click", () => {
     counter--; // Décrémente de 1
     updateDisplay();
-});*/
+});
 
 //Exercice 3 
 let list = document.getElementById("items-list");
@@ -44,6 +44,11 @@ newLiBtn.addEventListener("click", () => {
     let li = document.createElement("li");
     li.textContent = newLi.value;
     list.appendChild(li);
-    newLi.value = "";
+    newLi.value = ""
 });
+*/
 
+//Exercice 4 
+const checkbox = document.getElementById("dark-mode");
+
+checkbox.addEventListener("click", () => document.body.classList.toggle("dark-mode"));

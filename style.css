@@ -9,7 +9,7 @@
     height: auto;
     margin: 20px auto;
     padding: 20px;
-    background-color: bisque;
+    background-color: rgb(255, 157, 37);
     place-items: center;
     border-radius: 20px;
 }
@@ -55,4 +55,9 @@
 .calculation{
     display: flex;
     gap: 20px;
+}
+
+.dark-mode{
+    background-color: #121212;
+    color: #f1f1f1;
 }
