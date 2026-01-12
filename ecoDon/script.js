@@ -1,0 +1,1 @@
+const headerButton = document.getElementById("header-button");
