@@ -26,4 +26,17 @@ function showDonationList(dons) {
     });
 }
 
+function addDonation() {
+    const newDonation = {
+        id: dons.length + 1,
+        nom: donationName.value,
+        quantite: donationQuantity.value
+    };
+    dons.push(newDonation);
+    donationName.value = "";
+    donationQuantity.value = "";
+    showDonationList(dons);
+}
+
+addDonationBtn.addEventListener("click", addDonation);
 showDonationList(dons);
