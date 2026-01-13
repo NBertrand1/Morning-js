@@ -63,3 +63,12 @@
     padding-left: 10px;
 }
 
+.card-container{
+    display: grid;
+    grid-row: inherit;
+}
+
+.card{
+    
+}
+
