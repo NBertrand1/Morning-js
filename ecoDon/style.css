@@ -3,9 +3,13 @@
     justify-content: center;
 }
 
+.dark-mode{
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
 .app{    
     width: 1200px;
-    background-color: aquamarine;
 }
 
 .header{
@@ -23,7 +27,7 @@
     font-size: large;
 }
 
-.header-button span{
+.header-button{
     font-size: xx-large;
 }
 
@@ -44,6 +48,7 @@
     border-radius: 5px;
     border: none;
     padding-left: 10px;
+    background-color: rgb(218, 221, 224);
 }
 
 .app-content form button{
@@ -64,11 +69,36 @@
 }
 
 .card-container{
-    display: grid;
-    grid-row: inherit;
+    display: flex;
+    z-index: 1;
+    gap: 20px;
 }
 
 .card{
-    
+    margin: 10px;
+    width: 300px;
+    height: 150px;
+    border: solid 1px;
+    border-radius: 5px;
+    display: flex;
 }
 
+.card-info{
+    justify-self: start;
+    text-align: start;
+    margin: 5px;
+}
+
+.card-info p{
+
+}
+
+.card button{
+    color: green;
+    cursor: pointer;
+    border: none;
+}
+
+.card button:hover{
+    text-decoration: underline;
+}
