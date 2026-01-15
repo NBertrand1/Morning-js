@@ -69,8 +69,8 @@
 }
 
 .card-container{
+    width: 80%;
     display: flex;
-    z-index: 1;
     gap: 20px;
 }
 
