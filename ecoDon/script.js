@@ -10,6 +10,7 @@ const donationName = document.getElementById("donation-name");
 const donationQuantity = document.getElementById("donation-quantity");
 const addDonationBtn = document.getElementById("add-donation-button");
 const donationList = document.getElementById("card-container");
+const searchDonationInput = document.getElementById("search-bar");
 
 function darkMode() {
     themeBtn.addEventListener("click", () => {
@@ -53,10 +54,10 @@ function addDonation() {
         alert("Veuillez remplir tous les champs.");
         return;
     }else{
-    dons.push(newDonation);
-    donationName.value = "";
-    donationQuantity.value = "";
-    showDonationList(dons);
+        dons.push(newDonation);
+        donationName.value = "";
+        donationQuantity.value = "";
+        showDonationList(dons);
     }
 }
 
@@ -65,8 +66,13 @@ function reserveDonation(id) {
     showDonationList(dons);
 }
 
+function searchDonation() {
+    const searchValue = document.getElementById("search-bar").value.toLowerCase();
+    const filteredDons = dons.filter(don => don.nom.toLowerCase().includes(searchValue));
+    showDonationList(filteredDons);
+}
 
-
+searchDonationInput.addEventListener("input", searchDonation);
 
 addDonationBtn.addEventListener("click", addDonation);
 showDonationList(dons);
