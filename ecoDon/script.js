@@ -10,6 +10,7 @@ const donationName = document.getElementById("donation-name");
 const donationQuantity = document.getElementById("donation-quantity");
 const addDonationBtn = document.getElementById("add-donation-button");
 const donationList = document.getElementById("card-container");
+const reserveDonationBtn = document.getElementById("reserve-button");
 
 function darkMode() {
     themeBtn.addEventListener("click", () => {
@@ -29,7 +30,7 @@ function showDonationList(dons) {
                         <h3 class="font-bold text-lg">${don.nom}</h3>
                         <p class="text-sm opacity-70">Quantité : ${don.quantite}</p>
                     </div>                    
-                    <button onclick="reserver(${don.id})" class="text-emerald-600 font-bold hover:underline">Réserver</button>
+                    <button id="reserve-button" class="text-emerald-600 font-bold hover:underline">Réserver</button>
                 </div>
             `;
             donationList.appendChild(card);
@@ -47,6 +48,17 @@ function addDonation() {
     donationQuantity.value = "";
     showDonationList(dons);
 }
+
+function reserveDonation(id) {
+    const donation = dons.find(don => don.id === id);
+    dons.pop(donation);
+    showDonationList(dons);
+}
+
+reserveDonationBtn.addEventListener("click", () => {
+    reserveDonation(donation.id);
+});
+
 
 addDonationBtn.addEventListener("click", addDonation);
 showDonationList(dons);
