@@ -40,13 +40,18 @@
     justify-self: start;
 }
 
-.app-content form input{
-    height: 35px;
+.app-content form{
+    display: flex;
     justify-content: space-between;
     gap: 20px;
+}
+
+.app-content form input{
+    height: 35px;
     width: 400px;
     border-radius: 5px;
     border: none;
+    text-align: start;
     padding-left: 10px;
     background-color: rgb(218, 221, 224);
 }

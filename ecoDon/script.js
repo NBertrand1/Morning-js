@@ -15,6 +15,7 @@ const searchDonationInput = document.getElementById("search-bar");
 function darkMode() {
     themeBtn.addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
+        themeBtn.textContent = document.body.classList.contains("dark-mode") ? "🌝" : "🌚";
     });
 }
 
@@ -48,7 +49,7 @@ function addDonation() {
     const newDonation = {
         id: dons.length + 1,
         nom: donationName.value,
-        quantite: donationQuantity.value
+        quantite: Number(donationQuantity.value)
     };
     if (donationName.value === "" || donationQuantity.value === "") {
         alert("Veuillez remplir tous les champs.");
