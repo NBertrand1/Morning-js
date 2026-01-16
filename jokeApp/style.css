@@ -1,0 +1,21 @@
+*{
+    place-items: center;
+}
+
+body{
+    padding: 20px;
+}
+
+.joke-card{
+    width: 400px;
+    height: auto;
+}
+
+.joke-content{
+    margin: auto;
+}
+
+button{
+    height: 50px;
+    width: 200px;
+}
