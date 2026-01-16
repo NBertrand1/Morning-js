@@ -9,6 +9,19 @@ body{
 .joke-card{
     width: 400px;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.joke-card p{
+    margin: 20px;
+    padding: 10px;
+    width: 250px;
+    height: auto;
+    border: solid 1px;
+    border-radius: 20px;
+    text-align: center;
 }
 
 .joke-content{
@@ -18,5 +31,6 @@ body{
 button{
     height: 50px;
     width: 200px;
+    border-radius: 20px;
     left: 50%;
 }
