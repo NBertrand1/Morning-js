@@ -16,8 +16,8 @@ async function fetchWeather() {
 
     try {
         // Remplacer le contenu avec la nouvelle blague
-            temperature.innerText = `${data.temparature}`;
-            humidity.innerText = `${data.humidity}`;
+            temperature.innerText = `${data.main.temp}`;
+            humidity.innerText = `${data.main.humidity}`;
             windSpeed.innerText = `${data.windSpeed}`;
         } catch (error) {
             weatherContent.innerHTML = "<p>Failed to fetch a joke. Please try again.</p>";
