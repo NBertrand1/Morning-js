@@ -6,7 +6,7 @@ const windSpeed = document.getElementById("wind-speed");
 const weatherContent = document.getElementById("weather-info");
 
 async function fetchWeather() {
-    const response = await fetch("", {
+    const response = await fetch("https://api.openweathermap.org/data/2.5/", {
             headers: {
                 "Accept": "application/json"
             }
@@ -24,3 +24,5 @@ async function fetchWeather() {
     }
         
 };
+
+searchBtn.addEventListener("click", fetchWeather);
