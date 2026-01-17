@@ -6,8 +6,7 @@ async function jokeFetch() {
     jokeContent.innerHTML = "<p>Chargement...</p>";
 
     try {
-        const url = "https://icanhazdadjoke.com/";
-        const response = await fetch(url, {
+        const response = await fetch("https://icanhazdadjoke.com/", {
             headers: {
                 "Accept": "application/json"
             }
