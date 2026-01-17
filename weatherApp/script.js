@@ -12,7 +12,7 @@ async function fetchWeather() {
             }
         });
 
-    const data = await response.json
+    const data = await response.json();
 
     try {
         // Remplacer le contenu avec la nouvelle blague
