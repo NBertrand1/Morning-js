@@ -1,27 +1,30 @@
-const cryptoInfo = document.getElementsByClassName("crypto-info");
+const cryptoInfo = document.getElementById("crypto-info");
 const cryptoName = document.getElementById("crypto-name");
 const cryptoPrice = document.getElementById("crypto-price");
 const cryptoVolume = document.getElementById("crypto-volume");
 
 async function getCryptoInfo() {
     try {
-        const res = await fetch("https://api.freecryptoapi.com/v1/getData?symbol=BTC");
+        // API CoinGecko - gratuite et sans clé API
+        const res = await fetch("https://api.coingecko.com/api/v3/coins/bitcoin");
         const data = await res.json();
-        
-        //renvoyer les données à jour
-        cryptoName.innerText = `${data.name}`;
-        cryptoPrice.innerText = `${data.price}`;
-        cryptoVolume.innerText = `${data.volume}`;
 
-        //affichage pour toutes les cryptos
-        /*array.forEach(element => {
-            
-        });*/
+        // Afficher la structure pour débugger
+        console.log("Données reçues:", data);
 
+        // Extraire les données selon la structure de CoinGecko
+        const name = data.name;
+        const price = data.market_data.current_price.usd;
+        const volume = data.market_data.total_volume.usd;
+
+        // Afficher les données
+        cryptoName.innerText = name;
+        cryptoPrice.innerText = `$${price.toLocaleString()}`;
+        cryptoVolume.innerText = `Volume: $${volume.toLocaleString()}`;
 
     } catch (error) {
-        console.log("error:", error);
-        cryptoInfo.innerHTML = `<p>Error while syncing data. refresh the page</p>`
+        console.error("Erreur:", error);
+        cryptoInfo.innerHTML = `<p>Erreur lors de la récupération des données.</p>`;
     }
 }
 
