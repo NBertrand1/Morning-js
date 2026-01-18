@@ -1,30 +1,48 @@
-const cryptoInfo = document.getElementById("crypto-info");
-const cryptoName = document.getElementById("crypto-name");
-const cryptoPrice = document.getElementById("crypto-price");
-const cryptoVolume = document.getElementById("crypto-volume");
+const cryptoTableBody = document.getElementById("crypto-table-body");
+const loading = document.getElementById("loading");
 
 async function getCryptoInfo() {
     try {
-        // API CoinGecko - gratuite et sans clé API
-        const res = await fetch("https://api.coingecko.com/api/v3/coins/bitcoin");
+        // API CoinGecko - Top 10 cryptos par capitalisation
+        const res = await fetch(
+            "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false"
+        );
         const data = await res.json();
 
-        // Afficher la structure pour débugger
         console.log("Données reçues:", data);
 
-        // Extraire les données selon la structure de CoinGecko
-        const name = data.name;
-        const price = data.market_data.current_price.usd;
-        const volume = data.market_data.total_volume.usd;
+        // Cacher le message de chargement
+        loading.style.display = "none";
 
-        // Afficher les données
-        cryptoName.innerText = name;
-        cryptoPrice.innerText = `$${price.toLocaleString()}`;
-        cryptoVolume.innerText = `Volume: $${volume.toLocaleString()}`;
+        // Vider le tableau avant d'ajouter les nouvelles données
+        cryptoTableBody.innerHTML = "";
+
+        // Boucler sur chaque crypto et créer une ligne
+        data.forEach((crypto, index) => {
+            // Déterminer la couleur du pourcentage (vert si positif, rouge si négatif)
+            const priceChangeColor = crypto.price_change_percentage_24h >= 0 ? "green" : "red";
+            const priceChangeSign = crypto.price_change_percentage_24h >= 0 ? "+" : "";
+
+            // Créer une nouvelle ligne
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${index + 1}</td>
+                <td><img src="${crypto.image}" alt="${crypto.name}" width="30"></td>
+                <td><strong>${crypto.name}</strong> (${crypto.symbol.toUpperCase()})</td>
+                <td>$${crypto.current_price.toLocaleString()}</td>
+                <td style="color: ${priceChangeColor}">
+                    ${priceChangeSign}${crypto.price_change_percentage_24h.toFixed(2)}%
+                </td>
+                <td>$${crypto.total_volume.toLocaleString()}</td>
+            `;
+
+            // Ajouter la ligne au tableau
+            cryptoTableBody.appendChild(row);
+        });
 
     } catch (error) {
         console.error("Erreur:", error);
-        cryptoInfo.innerHTML = `<p>Erreur lors de la récupération des données.</p>`;
+        loading.innerText = "Erreur lors de la récupération des données.";
     }
 }
 

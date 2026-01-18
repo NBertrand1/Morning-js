@@ -5,23 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Dashboard</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="crypto-dashboard">
+    <div class="crypto-dashboard" align="center">
         <h1>Crypto Dashboard</h1>
+        <p id="loading">Chargement...</p>
         <div class="crypto-info" id="crypto-info">
-            <table border="1" cellspacing="5">
-                <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Volume</th>
-                </tr>
-                <tr>
-                    <td id="crypto-name"></td>
-                    <td id="crypto-price"></td>
-                    <td id="crypto-volume"></td>
-                </tr>
+            <table border="1" cellspacing="10" cellpadding="10" width="80%">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Logo</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>24h %</th>
+                        <th>Volume</th>
+                    </tr>
+                </thead>
+                <tbody id="crypto-table-body">
+                    <!-- Les lignes seront générées par JavaScript -->
+                </tbody>
             </table>
         </div>
     </div>
