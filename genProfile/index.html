@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generateur de profil</title>
+</head>
+<body>
+    <div class="app">
+        <div class="header">
+            <h1>Generateur de profil</h1>
+        </div>
+        <div class="app-content">
+            <form action="#">
+                <label for="name">
+                    <input type="text" placeholder="Nom" id="name">
+                </label>
+                <label for="age">
+                    <input type="number" placeholder="Age" id="age">
+                </label>
+                <label for="city">
+                    <input type="text" placeholder="Ville" id="city">
+                </label>
+                <label for="job">
+                    <input type="text" placeholder="Job" id="job">
+                </label>
+                <button type="submit" id="generate-button">Generer</button>
+            </form>
+            <div class="profile" id="profile">
+                <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Profile">
+                <h2 id="profile-name"></h2>
+                <p id="profile-age"></p>
+                <p id="profile-city"></p>
+                <p id="profile-job"></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
