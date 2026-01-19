@@ -9,6 +9,7 @@ async function convertir() {
         document.querySelector('#resultat').textContent = montant * taux;
     } catch (e) {
         console.error("Erreur de conversion");
+        document.querySelector('#resultat').textContent = "Erreur de conversion";
     }
 }
 
