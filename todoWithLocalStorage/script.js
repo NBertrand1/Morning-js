@@ -1,6 +1,7 @@
 const todoInput = document.getElementById("todo-input");
 const todoBtn = document.getElementById("todo-btn");
 const todoList = document.getElementById("todo-list");
+const clearBtn = document.getElementById("clear-btn");  
 
 function addTodo() {
     const todoText = todoInput.value.trim();
@@ -46,6 +47,8 @@ function clearTodos() {
     todoList.innerHTML = "";
     localStorage.clear();
 }
+
+clearBtn.addEventListener("click", clearTodos);
 
 todoBtn.addEventListener("click", addTodo);
 todoInput.addEventListener("keypress", (e) => {
