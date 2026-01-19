@@ -65,14 +65,6 @@ function loadTodos() {
 
         todoList.appendChild(li);
     });
-
-    /*function searchTodo() {
-        const searchInput = document.getElementById("search-input");
-        searchInput.addEventListener('input', () => {
-        const searchTerm = searchInput.value.toLowerCase().trim();
-        const results = todos.filter(todo=>todo.toLowerCase().includes(searchTerm));
-        });
-    }*/
 }
 
 function clearTodos() {
@@ -81,13 +73,6 @@ function clearTodos() {
 }
 
 clearBtn.addEventListener("click", clearTodos);
-
-todoBtn.addEventListener("click", addTodo);
-todoInput.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
-        addTodo();
-    }
-});
 
 loadTodos();
 
