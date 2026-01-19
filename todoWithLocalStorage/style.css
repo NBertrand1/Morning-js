@@ -1,0 +1,29 @@
+body{
+    place-items: center;
+    padding: 10px;
+}
+
+.container{
+    
+}
+
+.todo-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.todo-container input, .todo-container button{
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.todo-container ul{
+    list-style: none;
+}
+
+.todo-container li{
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}

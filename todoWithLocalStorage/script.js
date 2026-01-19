@@ -34,6 +34,18 @@ function loadTodos() {
     });
 }
 
+function clearTodos() {
+    todoList.innerHTML = "";
+    localStorage.clear();
+}
+
+todoBtn.addEventListener("click", addTodo);
+todoInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+        addTodo();
+    }
+});
+
 loadTodos();
 
     
