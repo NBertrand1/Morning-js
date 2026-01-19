@@ -32,6 +32,14 @@ function loadTodos() {
         li.textContent = todo;
         todoList.appendChild(li);
     });
+
+    /*function searchTodo() {
+        const searchInput = document.getElementById("search-input");
+        searchInput.addEventListener('input', () => {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const results = todos.filter(todo=>todo.toLowerCase().includes(searchTerm));
+        });
+    }*/
 }
 
 function clearTodos() {
@@ -47,5 +55,7 @@ todoInput.addEventListener("keypress", (e) => {
 });
 
 loadTodos();
+
+
 
     
