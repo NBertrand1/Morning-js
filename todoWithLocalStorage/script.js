@@ -30,7 +30,39 @@ function loadTodos() {
     const todos = JSON.parse(localStorage.getItem("todos")) || [];
     todos.forEach(todo => {
         const li = document.createElement("li");
-        li.textContent = todo;
+        li.className = "todo-card";
+
+        const todoText = document.createElement("div");
+        todoText.className = "todo-text";
+        todoText.textContent = todo;
+
+        const buttonGroup = document.createElement("div");
+        buttonGroup.className = "button-group";
+
+        const editBtn = document.createElement("button");
+        editBtn.textContent = "Edit";
+        editBtn.addEventListener("click", () => {
+            const newTodo = prompt("Edit todo", todoText.textContent);
+            if (newTodo) {
+                todoText.textContent = newTodo;
+                saveTodos();
+            }
+        });
+
+        const deleteBtn = document.createElement("button");
+        deleteBtn.textContent = "Delete";
+        deleteBtn.className = "delete-btn";
+        deleteBtn.addEventListener("click", () => {
+            todoList.removeChild(li);
+            saveTodos();
+        });
+
+        buttonGroup.appendChild(editBtn);
+        buttonGroup.appendChild(deleteBtn);
+
+        li.appendChild(todoText);
+        li.appendChild(buttonGroup);
+
         todoList.appendChild(li);
     });
 

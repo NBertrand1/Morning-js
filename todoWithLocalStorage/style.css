@@ -23,3 +23,45 @@ body{
     border-radius: 5px;
     margin: 5px;
 }
+
+.todo-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.todo-text {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.button-group {
+    display: flex;
+    gap: 5px;
+}
+
+.button-group button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button-group button:hover {
+    background-color: #e0e0e0;
+}
+
+.button-group button.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+}
+
+.button-group button.delete-btn:hover {
+    background-color: #ff1a1a;
+}
