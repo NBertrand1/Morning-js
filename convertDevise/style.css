@@ -33,6 +33,13 @@ input, button, p {
     transition: all 0.3s ease;
 }
 
+button:hover {
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    transition: all 0.3s ease;
+}
+
 span {
     position: relative;
     left: -30px;
