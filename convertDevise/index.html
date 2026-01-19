@@ -8,9 +8,16 @@
 </head>
 <body>
     <div class="container">
-        <input type="number" id="montant" placeholder="Entrez le montant en Euro">
+        <h1>EUR/USD converter</h1>
+        <div class="ToConvert">
+            <input type="number" id="montant" placeholder="Entrez le montant en Euro">
+            <span>€</span>
+        </div>
         <button id="convert-btn">Convertir</button>
-        <p id="resultat"></p>
+        <div class="Converted">
+            <p id="resultat"></p>
+            <span>$</span>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
