@@ -4,6 +4,7 @@ const temperature = document.getElementById("temperature");
 const humidity = document.getElementById("humidity");
 const windSpeed = document.getElementById("wind-speed");
 const weatherContent = document.getElementById("weather-info");
+const weatherIcon = document.getElementById("weather-icon");
 
 async function fetchWeather() {
     const city = cityInput.value.trim();
@@ -32,23 +33,22 @@ async function fetchWeather() {
 
         const { latitude, longitude, name } = geoData.results[0];
 
+        // Image de la ville via Unsplash (gratuit, sans clé API)
+        const cityImageUrl = `https://source.unsplash.com/400x200/?${encodeURIComponent(name)},city,landscape`;
+
         // 3. Météo : récupérer les données avec les coordonnées
         const weatherResponse = await fetch(
             `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current=temperature_2m,relative_humidity_2m,wind_speed_10m`
         );
         const weatherData = await weatherResponse.json();
 
-        // 4. Afficher les données
-        temperature.innerText = `${weatherData.current.temperature_2m}°C`;
-        humidity.innerText = `${weatherData.current.relative_humidity_2m}%`;
-        windSpeed.innerText = `${weatherData.current.wind_speed_10m} km/h`;
-
-        // Réafficher la structure normale
+        // 4. Afficher les données avec l'image de la ville
         weatherContent.innerHTML = `
+            <img src="${cityImageUrl}" alt="${name}" style="width: 100%; max-width: 400px; border-radius: 10px; margin-bottom: 15px;">
             <p><strong>${name}</strong></p>
-            <p>Temperature: <span id="temperature">${weatherData.current.temperature_2m}°C</span></p>
-            <p>Humidity: <span id="humidity">${weatherData.current.relative_humidity_2m}%</span></p>
-            <p>Wind Speed: <span id="wind-speed">${weatherData.current.wind_speed_10m} km/h</span></p>
+            <p>Temperature: ${weatherData.current.temperature_2m}°C</p>
+            <p>Humidity: ${weatherData.current.relative_humidity_2m}%</p>
+            <p>Wind Speed: ${weatherData.current.wind_speed_10m} km/h</p>
         `;
 
     } catch (error) {
