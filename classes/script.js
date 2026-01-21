@@ -8,7 +8,8 @@ class Personnage{
     attaquer(personnage){
         console.log(`${this.nom} attaque ${personnage.nom}`);
         personnage.sante -= 10;
-        document.getElementById("affichage").innerHTML = `<p>${personnage.nom} a ${personnage.sante} points de vie`;
+        this.energie -= 10;
+        document.getElementById("affichage").innerHTML = `<p>${personnage.nom} a ${personnage.sante} points de vie </br> ${this.energie} points d'energie`;
         console.log(`${personnage.nom} a ${personnage.sante} points de vie`);
         if(personnage.sante <= 0){
             console.log(`${personnage.nom} est mort`);
