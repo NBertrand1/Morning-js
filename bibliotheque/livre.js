@@ -1,0 +1,16 @@
+export class livre {
+    constructor(titre, annee_pub, auteur, genre){
+        this.titre = titre;
+        this.annee_pub = annee_pub;
+        this.auteur = auteur;
+        this.genre = genre;
+    }
+}
+
+export function emprunter(){
+    
+}
+
+export function rendre(){
+
+}
