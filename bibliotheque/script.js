@@ -19,7 +19,7 @@ function showBooks() {
             <p>${livre.genre}</p>
         </div>
         <button id="emprunt">emprunter</button>
-        <button>rendre</button>
+        <button id="remise">rendre</button>
         `;
         bookList.appendChild(card);
     });
@@ -30,9 +30,15 @@ showBooks();
 const empruntBtn = document.getElementById("emprunt");
 empruntBtn.addEventListener("click", emprunter);
 
-function emprunter(event) {
-    const card = event.target.closest("card");
-    if (card) {
-        card.remove();
-    }
+const remiseBtn =  document.getElementById("remise");
+remiseBtn.addEventListener("click", rendre);
+
+function emprunter() {
+    empruntBtn.style.display = "none";
+    remiseBtn.style.display = "block";
+}
+
+function rendre() {
+    empruntBtn.style.display = "block";
+    remiseBtn.style.display = "none";
 }
