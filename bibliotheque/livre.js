@@ -6,11 +6,3 @@ export default class livre {
         this.genre = genre;
     }
 }
-
-export function emprunter(){
-    
-}
-
-export function rendre(){
-
-}

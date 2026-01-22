@@ -8,17 +8,31 @@ const livres = [
     new livre("Aigre douce", 2006, "MD Word", "Poesie"),
 ];
 
-livres.forEach(livre => {
-    const card = document.createElement("card");
-    card.innerHTML = `
-    <h1>${livre.titre}</h1>
-    <div class="card-subinfo">
-        <p>${livre.annee_pub}</p>
-        <p>${livre.auteur}</p>
-        <p>${livre.genre}</p>
-    </div>
-    <button>emprunter</button>
-    <button>rendre</button>
-    `;
-    bookList.appendChild(card);
-});
+function showBooks() {
+    livres.forEach(livre => {
+        const card = document.createElement("card");
+        card.innerHTML = `
+        <h1>${livre.titre}</h1>
+        <div class="card-subinfo">
+            <p>${livre.annee_pub}</p>
+            <p>${livre.auteur}</p>
+            <p>${livre.genre}</p>
+        </div>
+        <button id="emprunt">emprunter</button>
+        <button>rendre</button>
+        `;
+        bookList.appendChild(card);
+    });
+}
+
+showBooks();
+
+const empruntBtn = document.getElementById("emprunt");
+empruntBtn.addEventListener("click", emprunter);
+
+function emprunter(event) {
+    const card = event.target.closest("card");
+    if (card) {
+        card.remove();
+    }
+}
