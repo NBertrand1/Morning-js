@@ -1,3 +1,5 @@
+import Toast from "./toast.js";
+
 const showToastBtn = document.getElementById("showToast");
 
 showToastBtn.addEventListener("click", () => {
