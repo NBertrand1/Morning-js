@@ -11,6 +11,7 @@ try {
     console.log(data);
 
     const playlist = new Playlist();
+    playlist = Playlist.showPlaylist();
 } catch (error) {
     console.log("Erreur : " + error);
 }
