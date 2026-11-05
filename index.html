@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Collection de mini-projets JavaScript réalisés pendant mon apprentissage.">
+  <meta name="theme-color" content="#101820">
+  <title>Morning JS — JavaScript Learning Lab</title>
+  <style>
+    :root{font-family:Inter,system-ui,sans-serif;color:#eaf0f4;background:#101820;font-synthesis:none;text-rendering:optimizeLegibility}
+    *{box-sizing:border-box}body{margin:0;min-width:320px;background:radial-gradient(circle at 85% 0,#183d42,transparent 35%),#101820}
+    main{width:min(1080px,calc(100% - 36px));margin:auto;padding:70px 0}
+    .eyebrow{font:11px monospace;letter-spacing:2px;text-transform:uppercase;color:#6dd7bf}
+    h1{font-size:clamp(38px,7vw,66px);line-height:1.05;letter-spacing:-3px;margin:18px 0}
+    .intro{max-width:680px;color:#a9bac4;line-height:1.8}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:42px}
+    a.card{display:block;padding:22px;background:#172630;border:1px solid #2b414b;border-radius:8px;text-decoration:none;color:inherit;transition:transform .2s,border-color .2s}
+    a.card:hover{transform:translateY(-3px);border-color:#6dd7bf}
+    .number{font:11px monospace;color:#6dd7bf}.card h2{font-size:18px;margin:14px 0 8px}.card p{font-size:13px;line-height:1.7;color:#a9bac4;margin:0}
+    footer{margin-top:50px;padding-top:20px;border-top:1px solid #2b414b;color:#81939e;font:11px monospace}
+  </style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">JavaScript · Practice · Small builds</p>
+  <h1>Morning JS<br><span style="color:#6dd7bf">Learning Lab.</span></h1>
+  <p class="intro">Une collection de mini-projets et d'exercices réalisés pour pratiquer JavaScript : manipulation du DOM, événements, stockage local, formulaires et appels à des API. Chaque carte ouvre un exercice indépendant.</p>
+  <section class="grid" aria-label="Mini-projets JavaScript">
+    <a class="card" href="./Toast/index.html"><span class="number">01 / UI</span><h2>Toast Notifications</h2><p>Affichage de notifications à l'écran.</p></a>
+    <a class="card" href="./bibliotheque/index.html"><span class="number">02 / DOM</span><h2>Bibliothèque</h2><p>Exercice de gestion et d'affichage d'éléments.</p></a>
+    <a class="card" href="./classes/index.html"><span class="number">03 / JS</span><h2>Classes</h2><p>Pratique de la programmation orientée objet en JavaScript.</p></a>
+    <a class="card" href="./convertDevise/index.html"><span class="number">04 / API</span><h2>Convertisseur de devises</h2><p>Exercice de conversion de monnaies.</p></a>
+    <a class="card" href="./cryptoBoard/index.html"><span class="number">05 / DATA</span><h2>Crypto Board</h2><p>Interface de consultation de données crypto.</p></a>
+    <a class="card" href="./ecoDon/index.html"><span class="number">06 / UI</span><h2>EcoDon</h2><p>Maquette et interactions autour d'une interface de don.</p></a>
+    <a class="card" href="./genProfile/index.html"><span class="number">07 / DOM</span><h2>Générateur de profil</h2><p>Exercice de génération de contenu côté navigateur.</p></a>
+    <a class="card" href="./githubProfileAnalyser/index.html"><span class="number">08 / API</span><h2>GitHub Profile Analyser</h2><p>Interface d'exploration d'un profil GitHub.</p></a>
+    <a class="card" href="./jokeApp/index.html"><span class="number">09 / API</span><h2>Joke App</h2><p>Application de récupération et d'affichage de blagues.</p></a>
+    <a class="card" href="./movieExplorer/index.html"><span class="number">10 / API</span><h2>Movie Explorer</h2><p>Exercice d'exploration de contenus cinéma.</p></a>
+    <a class="card" href="./playlistManager/index.html"><span class="number">11 / JS</span><h2>Playlist Manager</h2><p>Manipulation de listes et gestion de playlist.</p></a>
+    <a class="card" href="./todoWithLocalStorage/index.html"><span class="number">12 / STORAGE</span><h2>Todo with LocalStorage</h2><p>Liste de tâches conservée dans le navigateur.</p></a>
+    <a class="card" href="./weatherApp/index.html"><span class="number">13 / API</span><h2>Weather App</h2><p>Exercice d'affichage de données météo.</p></a>
+  </section>
+  <footer>Made by Beker · JavaScript learning repository · 2026</footer>
+</main>
+</body>
+</html>
