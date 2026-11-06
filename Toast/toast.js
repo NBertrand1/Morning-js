@@ -4,7 +4,7 @@ export default class Toast {
   constructor(message, type = "info", duration = 3000) {
     this.message = String(message ?? "");
     this.type = TOAST_TYPES.has(type) ? type : "info";
-    this.duration = Number.isFinite(duration) ? Math.max(0, duration) : 3000;
+    this.duration = Number.isFinite(duration) && duration >= 0 ? duration : 3000;
   }
 
   show() {
