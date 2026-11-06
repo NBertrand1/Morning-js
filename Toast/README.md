@@ -20,3 +20,14 @@ new Toast("Something went wrong.", "error", 5000).show();
 - `duration`: time in milliseconds before dismissal. Use `0` to keep the toast visible.
 
 The component uses live-region semantics for assistive technologies and respects reduced-motion preferences.
+
+
+## Tests
+
+Run the behavior tests with Node.js 18 or later:
+
+```sh
+npm test
+```
+
+The tests use a small DOM/timer stub to verify message safety, accessibility attributes, type and duration validation, and dismissal scheduling. They are not a substitute for a real browser/screen-reader check.
