@@ -1,8 +1,9 @@
 import Toast from "./toast.js";
 
-const showToastBtn = document.getElementById("showToast");
+const showToastButton = document.querySelector("#showToast");
 
-showToastBtn.addEventListener("click", () => {
-    const toast = new Toast("This is a toast", "success");
-    toast.show();
-});
+if (showToastButton) {
+  showToastButton.addEventListener("click", () => {
+    new Toast("Votre action a bien été prise en compte.", "success").show();
+  });
+}
